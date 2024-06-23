@@ -49,6 +49,32 @@ cat github.pub
 ![input title](./images/7.png)
 
 
-これでSSHキーの登録が完了しました。次に、GitHubにリモートリポジトリを作成し、ローカルリポジトリと連携させます。
+7. SSHの設定を行います。次のコマンドを実行して、~/.ssh/configファイルを作成します。
+
+```bash
+touch ~/.ssh/config
+```
+
+8. ~/.ssh/configファイルに次の内容を追加します。
+
+```
+Host github.com
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/github
+```
+
+9. SSH接続のテストを行います。次のコマンドを実行して、GitHubにSSH接続します。
+
+```bash
+ssh -T git@github.com
+```
+
+実行結果
+```
+Hi username! You've successfully authenticated, but GitHub does not provide shell access.
+```
+
+これでSSH接続の設定が完了しました。
 
 [次のステップへ](./step3.md)
