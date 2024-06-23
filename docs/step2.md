@@ -57,12 +57,18 @@ touch ~/.ssh/config
 
 8. ~/.ssh/configファイルに次の内容を追加します。
 
+```bash
+vim ~/.ssh/config
+```
+次の内容をコピーして貼り付けます。
 ```
 Host github.com
   HostName github.com
   User git
   IdentityFile ~/.ssh/github
 ```
+
+`Esc`キーを押して、`:wq`と入力して、`Enter`キーを押して保存して終了します。
 
 9. SSH接続のテストを行います。次のコマンドを実行して、GitHubにSSH接続します。
 
