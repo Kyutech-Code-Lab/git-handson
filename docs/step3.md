@@ -15,6 +15,7 @@ cd ~/github/hello-world
 git init
 ```
 
+実行結果
 ```
 Initialized empty Git repository in /Users/hogehoge/github/hello-world/.git/
 
